@@ -22,6 +22,7 @@ class ProjectViewSet(ModelViewSet):
 class ContributorViewSet(ModelViewSet):
     queryset = Contributor.objects.all()
     serializer_class = ContributorSerializer
+    permission_classes = [IsAuthenticated]
 
 
 class IssueViewSet(ModelViewSet):
